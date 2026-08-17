@@ -8,9 +8,22 @@
   if (rosterGrid && Array.isArray(data.roster)) {
     rosterGrid.innerHTML = data.roster.map(player => {
       const isTbd = String(player.number).toUpperCase() === "TBD";
+
       const media = player.photo
         ? `<img class="player-photo" src="${player.photo}" alt="${player.name}"/>`
         : `<div class="player-photo-placeholder" aria-label="Photo placeholder for ${player.name}">${initials(player.name)}</div>`;
+
+      const rawPositions = Array.isArray(player.positions) ? player.positions : [];
+      const outfield = ["LF", "CF", "RF"];
+      const displayPositions = rawPositions.filter(position => !outfield.includes(position));
+
+      if (rawPositions.some(position => outfield.includes(position))) {
+        displayPositions.push("OF");
+      }
+
+      const positionPills = displayPositions
+        .map(position => `<span>${position}</span>`)
+        .join("");
 
       return `
         <article class="roster-card">
@@ -18,7 +31,8 @@
           <div class="roster-number${isTbd ? " tbd" : ""}">${player.number}</div>
           <div>
             <h3>${player.name}</h3>
-            <span>${isTbd ? "Uniform Number" : "A's Baseball"}</span>
+            <div class="position-pills">${positionPills}</div>
+            <div class="player-bats">Bats: ${player.bats || "R"}</div>
           </div>
         </article>`;
     }).join("");
