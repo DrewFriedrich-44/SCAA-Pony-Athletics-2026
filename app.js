@@ -106,6 +106,14 @@
 
     const nextPractice = upcoming.find(e => e.type.toLowerCase() === "practice");
     const nextGame = upcoming.find(e => e.type.toLowerCase() === "game");
+    const completedGames = schedule.filter(e =>
+      e.type.toLowerCase() === "game" && ["W", "L", "T"].includes(String(e.result).toUpperCase())
+    );
+    const wins = completedGames.filter(e => String(e.result).toUpperCase() === "W").length;
+    const losses = completedGames.filter(e => String(e.result).toUpperCase() === "L").length;
+    const ties = completedGames.filter(e => String(e.result).toUpperCase() === "T").length;
+    const record = ties ? `${wins}-${losses}-${ties}` : `${wins}-${losses}`;
+    const lastGame = completedGames.at(-1);
 
     const card = (label, e, typeClass) => {
       if (!e) return `
@@ -126,7 +134,25 @@
         </article>`;
     };
 
-    nextUp.innerHTML =
+    const seasonSummary = `
+      <div class="season-summary${lastGame ? " has-last-game" : ""}">
+        <article class="record-card">
+          <span>SEASON RECORD</span>
+          <strong>${record}</strong>
+        </article>
+        ${lastGame ? `
+          <article class="last-game-card">
+            <span>LAST GAME</span>
+            <div class="last-game-score">
+              <b class="game-result ${lastGame.result.toLowerCase()}">${lastGame.result}</b>
+              <strong>${lastGame.score || "Final"}</strong>
+              <span>vs ${lastGame.opponent || "TBD"}</span>
+            </div>
+            <small>${lastGame.date}</small>
+          </article>` : ""}
+      </div>`;
+
+    nextUp.innerHTML = seasonSummary +
       card("NEXT PRACTICE", nextPractice, "practice") +
       card("NEXT GAME", nextGame, "game");
   }
