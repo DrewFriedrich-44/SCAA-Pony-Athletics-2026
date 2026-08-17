@@ -53,6 +53,17 @@
 .next-up-heading h2{font-size:46px;color:var(--green)}
 .next-up-heading p{max-width:480px;color:var(--muted);font-size:13px;line-height:1.6;margin:0}
 .next-up-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.season-summary{grid-column:1/-1;display:grid;grid-template-columns:1fr;gap:16px}
+.season-summary.has-last-game{grid-template-columns:minmax(180px,.65fr) 1.35fr}
+.record-card,.last-game-card{border:1px solid #cbd9d4;background:var(--green);color:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 8px 24px rgba(0,56,49,.08)}
+.record-card{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.record-card span,.last-game-card>span{font-size:9px;letter-spacing:.14em;font-weight:800;color:#b9d4ca}
+.record-card strong{font-family:"Barlow Condensed",sans-serif;font-size:42px;line-height:1;color:var(--gold)}
+.last-game-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;background:#fff;color:var(--green)}
+.last-game-score{display:flex;align-items:center;gap:12px}
+.last-game-score>strong{font-family:"Barlow Condensed",sans-serif;font-size:30px;line-height:1}
+.last-game-score>span{font-size:13px;font-weight:700;color:var(--muted)}
+.last-game-card small{font-size:10px;font-weight:700;color:var(--muted)}
 .next-card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(0,56,49,.04)}
 .next-card.game{background:#fff9e8;border-color:#ecd18f}
 .next-label{font-size:9px;letter-spacing:.14em;font-weight:800;color:var(--green2)}
@@ -99,6 +110,9 @@
   .next-up-heading{display:block}
   .next-up-heading p{margin-top:12px}
   .next-up-grid{grid-template-columns:1fr}
+  .season-summary.has-last-game{grid-template-columns:1fr}
+  .last-game-card{grid-template-columns:1fr;gap:10px}
+  .last-game-score{flex-wrap:wrap}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .spotlight-card{grid-template-columns:1fr;padding:28px}
   .spotlight-photo,.spotlight-initials{width:110px;height:110px}
