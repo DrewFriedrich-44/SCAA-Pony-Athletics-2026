@@ -1,18 +1,22 @@
 # SCAA Pony A's Team Site
 
 ## Routine updates
-For roster changes, edit **team-data.js** in GitHub.
+For roster **and schedule** changes, edit `team-data.js` in GitHub.
 
-Example:
+Examples:
+
 ```js
 { number: "27", name: "Kellen Moran" }
 ```
 
-Click **Commit changes** and GitHub Pages will republish automatically.
+```js
+{ date: "Sat, Sep 12", type: "Game", time: "10:00 AM", field: "C11", opponent: "Yankees" }
+```
+
+The schedule is HTML in both desktop and mobile layouts. Both versions are generated automatically from the same schedule list, so you only edit the information once.
 
 ## Files
 - `index.html` - page structure
-- `styles.css` - site design
-- `team-data.js` - easy team information edits
-- `app.js` - renders roster cards
-- `assets/` - logo, schedule, QR code
+- `styles.css` - site design and responsive layout
+- `team-data.js` - easy roster and schedule edits
+- `app.js` - renders roster and schedule
