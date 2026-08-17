@@ -60,4 +60,29 @@
   .qr-panel {
     max-width: 100%;
   }
+}/* GAMECHANGER + QR WIDTH ALIGNMENT */
+.gamechanger-grid {
+  grid-template-columns: 1fr !important;
+}
+
+.gamechanger-panel,
+.qr-card {
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keep both full-width on smaller screens */
+@media (max-width: 700px) {
+  .gamechanger-panel,
+  .qr-card {
+    max-width: 100%;
+  }
 }
