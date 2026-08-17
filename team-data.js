@@ -1,7 +1,6 @@
 // EDIT THIS FILE for routine team updates.
 // Change roster numbers, names, dates, times, fields, or opponents here,
-// then commit the file in GitHub. The desktop and mobile schedule both
-// update automatically from this one list.
+// then commit the file in GitHub.
 
 window.TEAM_DATA = {
   teamName: "SCAA Pony A's",
@@ -16,7 +15,7 @@ window.TEAM_DATA = {
     { number: "12", name: "Ryan Bowen" },
     { number: "3",  name: "Reese Settar" },
     { number: "TBD", name: "Kellen Moran" },
-    { number: "17", name: "Stefan Nazzaro" },
+    { number: "TBD", name: "Stefan Nazzaro" },
     { number: "TBD", name: "Jaxon Harris" },
     { number: "TBD", name: "Jay Stanko" }
   ],

@@ -53,4 +53,36 @@
         </article>`;
     }).join("");
   }
+
+  const nextUp = document.getElementById("next-up-grid");
+  if (nextUp) {
+    const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+    const parseDate = (label) => {
+      const m = label.match(/(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat),\s+([A-Z][a-z]{2})\s+(\d{1,2})/);
+      if (!m) return null;
+      return new Date(2026, months[m[1]], Number(m[2]), 23, 59, 59);
+    };
+    const now = new Date();
+    const upcoming = schedule.filter(e => {
+      const d = parseDate(e.date);
+      return d && d >= now;
+    });
+    const nextPractice = upcoming.find(e => e.type.toLowerCase() === "practice");
+    const nextGame = upcoming.find(e => e.type.toLowerCase() === "game");
+
+    const card = (label, e, typeClass) => {
+      if (!e) return `<article class="next-card ${typeClass}"><span class="next-label">${label}</span><h3>Nothing scheduled</h3></article>`;
+      return `<article class="next-card ${typeClass}">
+        <span class="next-label">${label}</span>
+        <h3>${e.date}</h3>
+        <div class="next-meta">
+          <span><small>TIME</small><strong>${e.time}</strong></span>
+          <span><small>FIELD</small><strong>${e.field}</strong></span>
+        </div>
+        ${typeClass === "game" ? `<div class="next-opponent">Opponent: <strong>${e.opponent || "TBD"}</strong></div>` : ""}
+      </article>`;
+    };
+
+    nextUp.innerHTML = card("NEXT PRACTICE", nextPractice, "practice") + card("NEXT GAME", nextGame, "game");
+  }
 })();

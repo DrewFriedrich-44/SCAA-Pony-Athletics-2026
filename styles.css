@@ -37,112 +37,58 @@
   .schedule-mobile{display:grid;gap:10px}
 }
 
-/* GAMECHANGER + QR RESPONSIVE LAYOUT */
 
-/* Large desktop: keep scoreboard and QR side by side */
-.gc-grid {
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 50px;
-  align-items: center;
-}
+/* HERO QUICK GAMECHANGER */
+.hero-utility{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-top:28px}
+.hero-utility .hero-actions{margin-top:0}
+.hero-qr{display:flex;align-items:center;gap:10px;background:#fff;color:var(--green);padding:8px 12px 8px 8px;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.hero-qr img{width:58px;height:58px;object-fit:cover;border-radius:6px}
+.hero-qr span{display:flex;flex-direction:column;line-height:1.05}
+.hero-qr strong{font-size:10px;letter-spacing:.08em}
+.hero-qr small{font-size:9px;color:#6f7c77;margin-top:4px}
 
-.gc-widget-wrap {
-  width: 100%;
-  overflow: hidden;
-}
+/* NEXT UP */
+.next-up-section{background:#f8faf9;padding:54px 0;border-bottom:1px solid var(--line)}
+.next-up-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px}
+.next-up-heading h2{font-size:46px;color:var(--green)}
+.next-up-heading p{max-width:480px;color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.next-up-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.next-card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(0,56,49,.04)}
+.next-card.game{background:#fff9e8;border-color:#ecd18f}
+.next-label{font-size:9px;letter-spacing:.14em;font-weight:800;color:var(--green2)}
+.next-card h3{font-size:30px;color:var(--green);margin-top:7px}
+.next-card.game h3{color:#8a5c00}
+.next-meta{display:flex;gap:30px;margin-top:18px}
+.next-meta span{display:flex;flex-direction:column}
+.next-meta small{font-size:8px;letter-spacing:.14em;color:#8a9590;font-weight:800}
+.next-meta strong{font-size:14px;margin-top:4px}
+.next-opponent{font-size:12px;color:#78622a;margin-top:14px}
 
-#gc-schedule-widget-79qt {
-  width: 100%;
-}
+/* SPOTLIGHT */
+.spotlight-section{padding:74px 0;background:var(--cream)}
+.spotlight-card{display:grid;grid-template-columns:180px 1fr;gap:42px;align-items:center;background:var(--green);color:#fff;border-radius:22px;padding:38px}
+.spotlight-mark{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--green);font-family:"Barlow Condensed",Impact,sans-serif;font-size:58px;font-weight:800}
+.spotlight-copy h2{font-size:50px}
+.spotlight-copy p{color:#d3ded9;line-height:1.7;max-width:700px}
+.spotlight-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.spotlight-tags span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 12px;font-size:10px;font-weight:800;letter-spacing:.05em}
 
-.qr-card {
-  width: 100%;
-  max-width: 340px;
-  justify-self: center;
-}
+/* GAMECHANGER AT BOTTOM */
+.gc-stack{width:100%;max-width:760px;margin:0 auto}
+.gc-widget-wrap{width:100%;margin-top:28px;background:#fff;border-radius:14px;padding:14px;color:#111;overflow:hidden;min-height:150px}
+#gc-schedule-widget-79qt{width:100%}
+.gc-qr{width:100%;max-width:760px;margin:28px auto 0}
+.gc-qr img{width:100%;max-width:380px;height:auto;margin:0 auto;display:block}
 
-.qr-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* iPad landscape, tablets, and narrower desktop windows:
-   stack the QR beneath the GameChanger widget */
-@media (max-width: 1200px) {
-  .gc-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .gc-widget-wrap {
-    width: 100%;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .qr-card {
-    width: 100%;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .qr-card img {
-    width: min(100%, 420px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* Phone */
-@media (max-width: 800px) {
-  .gc-widget-wrap,
-  .qr-card {
-    max-width: 100%;
-  }
-
-  .qr-card img {
-    width: 100%;
-    max-width: 320px;
-  }
-  /* FINAL GAMECHANGER LAYOUT
-   Stack scoreboard and QR on every screen size */
-
-.gc-grid {
-  display: block !important;
-}
-
-.gc-grid > div:first-child {
-  width: 100%;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.gc-widget-wrap {
-  width: 100%;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#gc-schedule-widget-79qt {
-  width: 100% !important;
-}
-
-.qr-card {
-  width: 100% !important;
-  max-width: 760px !important;
-  margin: 28px auto 0 !important;
-}
-
-.qr-card img {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
+@media(max-width:800px){
+  .hero-utility{display:block}
+  .hero-utility .hero-actions{margin-top:28px}
+  .hero-qr{margin-top:14px;width:max-content;max-width:100%}
+  .next-up-heading{display:block}
+  .next-up-heading p{margin-top:12px}
+  .next-up-grid{grid-template-columns:1fr}
+  .spotlight-card{grid-template-columns:1fr;padding:28px}
+  .spotlight-mark{width:110px;height:110px;font-size:44px}
+  .spotlight-copy h2{font-size:42px}
+  .gc-widget-wrap{padding:8px}
 }

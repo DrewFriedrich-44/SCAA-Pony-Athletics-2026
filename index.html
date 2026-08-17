@@ -20,10 +20,11 @@
 <span><strong>SCAA PONY A'S</strong><small>FALL 2026</small></span>
 </a>
 <div class="navlinks">
+<a href="#top">Home</a>
 <a href="#schedule">Schedule</a>
-<a href="#team">Team</a>
+<a href="#team">Roster</a>
 <a href="#coaches">Coaches</a>
-<a class="nav-cta" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">GameChanger</a>
+<a class="nav-cta" href="#gamechanger">GameChanger</a>
 </div>
 </nav>
 <div class="hero-grid shell">
@@ -35,9 +36,15 @@
 <div><span>01</span><strong>Be a great teammate.</strong></div>
 <div><span>02</span><strong>Give great effort.</strong></div>
 </div>
-<div class="hero-actions">
-<a class="button gold" href="#schedule">View Team Schedule</a>
-<a class="button ghost" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open GameChanger</a>
+<div class="hero-utility">
+  <div class="hero-actions">
+    <a class="button gold" href="#schedule">View Team Schedule</a>
+    <a class="button ghost" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open GameChanger</a>
+  </div>
+  <a class="hero-qr" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank" aria-label="Open A's GameChanger page">
+    <img src="gamechanger-qr.png" alt="QR code for the A's GameChanger page"/>
+    <span><strong>GAMECHANGER</strong><small>Scan to follow</small></span>
+  </a>
 </div>
 </div>
 <div aria-hidden="true" class="hero-mark">
@@ -54,6 +61,15 @@
 <div><span>TEAM HUB</span><strong>GameChanger</strong></div>
 </div>
 </section>
+<section class="next-up-section" id="next-up">
+  <div class="shell">
+    <div class="next-up-heading">
+      <div><div class="eyebrow dark">At a Glance</div><h2>Next Up</h2></div>
+      <p>The next practice and next game update automatically from the team schedule.</p>
+    </div>
+    <div class="next-up-grid" id="next-up-grid"></div>
+  </div>
+</section>
 <section class="section shell" id="schedule">
 <div class="section-heading">
 <div><div class="eyebrow dark">Fall 2026</div><h2>Team Schedule</h2></div>
@@ -69,31 +85,7 @@
   <div class="schedule-mobile" id="schedule-mobile" aria-label="Mobile team schedule"></div>
 </div>
 </section>
-<section class="gc-section" id="gamechanger">
-  <div class="shell" style="display:block;">
-    <div style="width:100%; max-width:760px; margin:0 auto;">
-      <div class="eyebrow">Live team updates</div>
-      <h2>Follow the A's on GameChanger</h2>
-      <p>Game schedules, scoring, live game status and team updates all live in GameChanger. Use the button or scan the code to open the team page.</p>
-      <a class="button gold" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open Team on GameChanger</a>
 
-      <div class="widget-note">
-        <strong>Live Scoreboard</strong>
-        <span>Upcoming games, live game status and scores are powered by GameChanger.</span>
-      </div>
-
-      <div class="gc-widget-wrap" style="width:100%; max-width:760px; margin:28px auto 0; overflow:hidden;">
-        <div id="gc-schedule-widget-79qt" style="width:100%;"></div>
-      </div>
-
-      <div class="qr-card" style="width:100%; max-width:760px; margin:28px auto 0;">
-        <img alt="QR code to open the A's GameChanger page" src="gamechanger-qr.png" style="width:100%; max-width:380px; height:auto; margin:0 auto; display:block;"/>
-        <strong>SCAN TO FOLLOW</strong>
-        <span>GameChanger Team Page</span>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="section shell" id="team">
 <div class="section-heading">
 <div><div class="eyebrow dark">Our Team</div><h2>Roster</h2></div>
@@ -122,6 +114,43 @@
 <p>We expect to compete. But fall baseball is bigger than a win-loss record. Our goal is to help the boys improve their skills, learn to love competing together and leave the season loving baseball more than when they started.</p>
 <div class="big-standards"><strong>BE A GREAT TEAMMATE.</strong><strong>GIVE GREAT EFFORT.</strong></div>
 </div>
+</section>
+<section class="spotlight-section" id="spotlight">
+  <div class="shell">
+    <div class="spotlight-card">
+      <div class="spotlight-mark">A's</div>
+      <div class="spotlight-copy">
+        <div class="eyebrow">Coming This Season</div>
+        <h2>A's Spotlight</h2>
+        <p>We’ll use this space to celebrate players for things that matter: being a great teammate, giving great effort, competing well and making an impact for the team.</p>
+        <div class="spotlight-tags">
+          <span>Great Teammate</span><span>Great Effort</span><span>Big Moment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gc-section" id="gamechanger">
+  <div class="shell">
+    <div class="gc-stack">
+      <div class="eyebrow">Live team updates</div>
+      <h2>Follow the A's on GameChanger</h2>
+      <p>Game schedules, scoring, live game status and team updates all live in GameChanger. Use the button or scan the code to open the team page.</p>
+      <a class="button gold" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open Team on GameChanger</a>
+      <div class="widget-note">
+        <strong>Live Scoreboard</strong>
+        <span>Upcoming games, live game status and scores are powered by GameChanger.</span>
+      </div>
+      <div class="gc-widget-wrap">
+        <div id="gc-schedule-widget-79qt"></div>
+      </div>
+      <div class="qr-card gc-qr">
+        <img alt="QR code to open the A's GameChanger page" src="gamechanger-qr.png"/>
+        <strong>SCAN TO FOLLOW</strong>
+        <span>GameChanger Team Page</span>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 <footer>
