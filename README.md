@@ -1,14 +1,24 @@
-# SCAA Pony A's Team Hub Update
+# SCAA Pony A's Website Control Center
 
-Replace these four files in the repository:
-- index.html
-- styles.css
-- team-data.js
-- app.js
+## Routine updates
+Edit only `team-data.js` for most website changes.
 
-Changes:
-- Adds compact GameChanger QR in the hero
-- Adds dynamic Next Up cards
-- Keeps full responsive HTML schedule
-- Moves GameChanger below roster, coaches, philosophy and spotlight
-- Adds A's Spotlight placeholder
+### Roster
+Change names, numbers, or add `photo`.
+
+### Schedule
+Update any date, time, field, opponent, or activity.
+The `Next Up` section updates automatically.
+
+### Spotlight
+Set `active: true` and fill in the player information.
+Set `active: false` to hide the section.
+
+### Photo Gallery
+Upload images into a `gallery/` folder and add them to the `gallery` array.
+
+### Files
+- `team-data.js` = routine content updates
+- `app.js` = rendering logic
+- `index.html` = page structure
+- `styles.css` = design

@@ -64,14 +64,26 @@
 .next-meta strong{font-size:14px;margin-top:4px}
 .next-opponent{font-size:12px;color:#78622a;margin-top:14px}
 
+/* PLAYER PHOTOS */
+.player-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;border:4px solid #f2c94c;box-shadow:0 5px 16px rgba(0,56,49,.12);margin-bottom:18px}
+
+/* PHOTO GALLERY */
+.gallery-section{padding:86px 0;background:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery-item{margin:0;border-radius:16px;overflow:hidden;background:#f4f6f5;border:1px solid var(--line)}
+.gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gallery-item figcaption{padding:10px 12px;font-size:11px;color:var(--muted);font-weight:700}
+
 /* SPOTLIGHT */
 .spotlight-section{padding:74px 0;background:var(--cream)}
 .spotlight-card{display:grid;grid-template-columns:180px 1fr;gap:42px;align-items:center;background:var(--green);color:#fff;border-radius:22px;padding:38px}
-.spotlight-mark{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--green);font-family:"Barlow Condensed",Impact,sans-serif;font-size:58px;font-weight:800}
+.spotlight-media{display:flex;justify-content:center}
+.spotlight-photo,.spotlight-initials{width:150px;height:150px;border-radius:50%;border:5px solid var(--gold)}
+.spotlight-photo{object-fit:cover}
+.spotlight-initials{display:grid;place-items:center;background:var(--gold);color:var(--green);font-family:"Barlow Condensed",Impact,sans-serif;font-size:58px;font-weight:800}
 .spotlight-copy h2{font-size:50px}
+.spotlight-copy h2 span{color:var(--gold)}
 .spotlight-copy p{color:#d3ded9;line-height:1.7;max-width:700px}
-.spotlight-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.spotlight-tags span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 12px;font-size:10px;font-weight:800;letter-spacing:.05em}
 
 /* GAMECHANGER AT BOTTOM */
 .gc-stack{width:100%;max-width:760px;margin:0 auto}
@@ -87,8 +99,14 @@
   .next-up-heading{display:block}
   .next-up-heading p{margin-top:12px}
   .next-up-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
   .spotlight-card{grid-template-columns:1fr;padding:28px}
-  .spotlight-mark{width:110px;height:110px;font-size:44px}
+  .spotlight-photo,.spotlight-initials{width:110px;height:110px}
+  .spotlight-initials{font-size:44px}
   .spotlight-copy h2{font-size:42px}
   .gc-widget-wrap{padding:8px}
+}
+
+@media(max-width:520px){
+  .gallery-grid{grid-template-columns:1fr}
 }

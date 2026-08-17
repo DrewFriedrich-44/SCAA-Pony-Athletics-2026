@@ -21,9 +21,9 @@
 </a>
 <div class="navlinks">
 <a href="#top">Home</a>
-<a href="#schedule">Schedule</a>
 <a href="#team">Roster</a>
 <a href="#coaches">Coaches</a>
+<a href="#schedule">Schedule</a>
 <a class="nav-cta" href="#gamechanger">GameChanger</a>
 </div>
 </nav>
@@ -38,8 +38,8 @@
 </div>
 <div class="hero-utility">
   <div class="hero-actions">
-    <a class="button gold" href="#schedule">View Team Schedule</a>
-    <a class="button ghost" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open GameChanger</a>
+    <a class="button gold" href="#team">Meet the A's</a>
+    <a class="button ghost" href="#schedule">View Team Schedule</a>
   </div>
   <a class="hero-qr" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank" aria-label="Open A's GameChanger page">
     <img src="gamechanger-qr.png" alt="QR code for the A's GameChanger page"/>
@@ -70,22 +70,6 @@
     <div class="next-up-grid" id="next-up-grid"></div>
   </div>
 </section>
-<section class="section shell" id="schedule">
-<div class="section-heading">
-<div><div class="eyebrow dark">Fall 2026</div><h2>Team Schedule</h2></div>
-<p>Practices, games, times and field assignments in one place. Game times and fields are listed as TBD until assigned by the league.</p>
-</div>
-<div class="schedule-shell">
-  <div class="schedule-desktop" aria-label="Desktop team schedule">
-    <div class="schedule-table-head">
-      <span>Date</span><span>Activity</span><span>Time</span><span>Field</span><span>Opponent</span>
-    </div>
-    <div id="schedule-desktop"></div>
-  </div>
-  <div class="schedule-mobile" id="schedule-mobile" aria-label="Mobile team schedule"></div>
-</div>
-</section>
-
 <section class="section shell" id="team">
 <div class="section-heading">
 <div><div class="eyebrow dark">Our Team</div><h2>Roster</h2></div>
@@ -115,19 +99,33 @@
 <div class="big-standards"><strong>BE A GREAT TEAMMATE.</strong><strong>GIVE GREAT EFFORT.</strong></div>
 </div>
 </section>
+<section class="gallery-section" id="gallery">
+  <div class="shell">
+    <div class="section-heading">
+      <div><div class="eyebrow dark">A's in Action</div><h2>Photo Gallery</h2></div>
+      <p>A few moments from practices, games and the season together.</p>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+<section class="section shell" id="schedule">
+<div class="section-heading">
+<div><div class="eyebrow dark">Fall 2026</div><h2>Team Schedule</h2></div>
+<p>Practices, games, times and field assignments in one place. Game times and fields are listed as TBD until assigned by the league.</p>
+</div>
+<div class="schedule-shell">
+  <div class="schedule-desktop" aria-label="Desktop team schedule">
+    <div class="schedule-table-head">
+      <span>Date</span><span>Activity</span><span>Time</span><span>Field</span><span>Opponent</span>
+    </div>
+    <div id="schedule-desktop"></div>
+  </div>
+  <div class="schedule-mobile" id="schedule-mobile" aria-label="Mobile team schedule"></div>
+</div>
+</section>
 <section class="spotlight-section" id="spotlight">
   <div class="shell">
-    <div class="spotlight-card">
-      <div class="spotlight-mark">A's</div>
-      <div class="spotlight-copy">
-        <div class="eyebrow">Coming This Season</div>
-        <h2>A's Spotlight</h2>
-        <p>We’ll use this space to celebrate players for things that matter: being a great teammate, giving great effort, competing well and making an impact for the team.</p>
-        <div class="spotlight-tags">
-          <span>Great Teammate</span><span>Great Effort</span><span>Big Moment</span>
-        </div>
-      </div>
-    </div>
+    <div class="spotlight-card"></div>
   </div>
 </section>
 <section class="gc-section" id="gamechanger">
@@ -137,13 +135,16 @@
       <h2>Follow the A's on GameChanger</h2>
       <p>Game schedules, scoring, live game status and team updates all live in GameChanger. Use the button or scan the code to open the team page.</p>
       <a class="button gold" href="https://web.gc.com/teams/1GJiFe1bEylE/live?pid=Copy&amp;c=team_share_link" rel="noopener" target="_blank">Open Team on GameChanger</a>
+
       <div class="widget-note">
         <strong>Live Scoreboard</strong>
         <span>Upcoming games, live game status and scores are powered by GameChanger.</span>
       </div>
+
       <div class="gc-widget-wrap">
         <div id="gc-schedule-widget-79qt"></div>
       </div>
+
       <div class="qr-card gc-qr">
         <img alt="QR code to open the A's GameChanger page" src="gamechanger-qr.png"/>
         <strong>SCAN TO FOLLOW</strong>
@@ -153,6 +154,12 @@
   </div>
 </section>
 </main>
+
+
+
+
+
+
 <footer>
 <div class="shell footer-grid">
 <div class="brand footer-brand"><img alt="A's logo" src="as-logo.png"/><span><strong>SCAA PONY A'S</strong><small>FALL 2026</small></span></div>
