@@ -36,18 +36,3 @@
   .schedule-desktop{display:none}
   .schedule-mobile{display:grid;gap:10px}
 }
-/* GAMECHANGER NEXT GAME WIDGET */
-#gc-schedule-widget-79qt {
-  width: 100%;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-/* Keep GameChanger full-width on phones */
-@media (max-width: 700px) {
-  #gc-schedule-widget-79qt {
-    max-width: 100%;
-  }
-}
