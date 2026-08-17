@@ -36,3 +36,28 @@
   .schedule-desktop{display:none}
   .schedule-mobile{display:grid;gap:10px}
 }
+/* MATCH QR SECTION TO GAMECHANGER WIDTH */
+.qr-card,
+.qr-wrap,
+.qr-panel {
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-card img,
+.qr-wrap img,
+.qr-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .qr-card,
+  .qr-wrap,
+  .qr-panel {
+    max-width: 100%;
+  }
+}
