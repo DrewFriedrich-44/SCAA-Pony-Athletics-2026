@@ -41,6 +41,13 @@ window.TEAM_DATA = {
   /* ---------------- SCHEDULE ----------------
      Next Up is calculated automatically from this list.
      For games, update time, field, and opponent when assigned.
+
+     AFTER A GAME:
+     result: "W", score: "8-5"
+     result: "L", score: "4-7"
+
+     Before the game, leave both fields blank:
+     result: "", score: ""
   ----------------------------------------------------- */
   schedule: [
     { date: "Sat, Aug 22", type: "Practice", time: "9:00 AM - 11:00 AM", field: "C11", opponent: "" },
@@ -51,28 +58,28 @@ window.TEAM_DATA = {
     { date: "Thu, Sep 3", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Sep 10", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
 
-    { date: "Sat, Sep 12", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Sep 12", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Sep 15", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Sep 17", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C12", opponent: "" },
-    { date: "Sat, Sep 19", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Sep 19", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Sep 22", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Sep 24", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
-    { date: "Sat, Sep 26", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Sep 26", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Sep 29", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Oct 1", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
-    { date: "Sat, Oct 3", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Oct 3", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Oct 6", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Oct 8", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C12", opponent: "" },
-    { date: "Sat, Oct 10", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Oct 10", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Oct 13", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Oct 15", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C12", opponent: "" },
-    { date: "Sat, Oct 17", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Oct 17", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Oct 20", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Oct 22", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C12", opponent: "" },
-    { date: "Sat, Oct 24", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" },
+    { date: "Sat, Oct 24", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" },
     { date: "Tue, Oct 27", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C11", opponent: "" },
     { date: "Thu, Oct 29", type: "Practice", time: "5:30 PM - 7:00 PM", field: "C12", opponent: "" },
-    { date: "Sat, Oct 31", type: "Game", time: "TBD", field: "TBD", opponent: "TBD" }
+    { date: "Sat, Oct 31", type: "Game", time: "TBD", field: "TBD", opponent: "TBD", result: "", score: "" }
   ],
 
   /* ---------------- A'S SPOTLIGHT ----------------

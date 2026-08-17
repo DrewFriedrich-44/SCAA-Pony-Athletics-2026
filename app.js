@@ -38,7 +38,10 @@
           <span><b class="activity-pill">${event.type}</b></span>
           <span>${event.time}</span>
           <span>${event.field}</span>
-          <span>${event.opponent || "—"}</span>
+          <span class="opponent-result">
+            <span>${event.opponent || "—"}</span>
+            ${isGame && event.result && event.score ? `<b class="game-result ${event.result.toLowerCase()}">${event.result} ${event.score}</b>` : ""}
+          </span>
         </div>`;
     }).join("");
   }
@@ -56,7 +59,11 @@
             <div><span>TIME</span><strong>${event.time}</strong></div>
             <div><span>FIELD</span><strong>${event.field}</strong></div>
           </div>
-          ${isGame ? `<div class="schedule-opponent"><span>OPPONENT</span><strong>${event.opponent || "TBD"}</strong></div>` : ""}
+          ${isGame ? `<div class="schedule-opponent">
+            <span>OPPONENT</span>
+            <strong>${event.opponent || "TBD"}</strong>
+            ${event.result && event.score ? `<b class="game-result ${event.result.toLowerCase()}">${event.result} ${event.score}</b>` : ""}
+          </div>` : ""}
         </article>`;
     }).join("");
   }

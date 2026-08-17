@@ -110,3 +110,14 @@
 @media(max-width:520px){
   .gallery-grid{grid-template-columns:1fr}
 }
+
+
+/* GAME RESULTS */
+.opponent-result{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.game-result{display:inline-flex;align-items:center;justify-content:center;min-width:52px;padding:5px 8px;border-radius:999px;font-size:10px;letter-spacing:.04em;font-weight:800;line-height:1}
+.game-result.w{background:#dff3e9;color:#075c3f;border:1px solid #b7dfcc}
+.game-result.l{background:#f7e5e5;color:#8a2f2f;border:1px solid #e8c1c1}
+.schedule-opponent .game-result{margin-left:auto}
+@media(max-width:800px){
+  .schedule-opponent{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+}
