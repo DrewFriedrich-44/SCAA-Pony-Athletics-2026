@@ -14,7 +14,7 @@ window.TEAM_DATA = {
     { number: "12", name: "Ryan Bowen" },
     { number: "3",  name: "Reese Settar" },
     { number: "TBD", name: "Kellen Moran" },
-    { number: "TBD", name: "Stefan Nazzaro" },
+    { number: "17", name: "Stefan Nazzaro" },
     { number: "TBD", name: "Jaxon Harris" },
     { number: "TBD", name: "Jay Stanko" }
   ],
