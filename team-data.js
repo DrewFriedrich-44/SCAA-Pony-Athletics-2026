@@ -31,7 +31,7 @@ window.TEAM_DATA = {
     { number: "32", name: "Luke Dudash", photo: "" },
     { number: "15", name: "Pete Barnes", photo: "" },
     { number: "12", name: "Ryan Bowen", photo: "" },
-    { number: "3",  name: "Reese Settar", photo: "" },
+    { number: "21",  name: "Reese Settar", photo: "" },
     { number: "TBD", name: "Kellen Moran", photo: "" },
     { number: "TBD", name: "Stefan Nazzaro", photo: "" },
     { number: "TBD", name: "Jaxon Harris", photo: "" },
