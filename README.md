@@ -1,20 +1,18 @@
-# SCAA Pony A's Fall 2026 Team Site
+# SCAA Pony A's Team Site
 
-Static, mobile-first team microsite.
+## Routine updates
+For roster changes, edit **team-data.js** in GitHub.
 
-## Current content
-- A's branding
-- Fall 2026 schedule image
-- GameChanger team link + QR code
-- Coaching staff
-- Team standards
-- Roster placeholder
+Example:
+```js
+{ number: "27", name: "Kellen Moran" }
+```
 
-## Add roster players
-Replace the `roster-placeholder` block in `index.html` with roster cards, or add a small `roster.js` data file later.
+Click **Commit changes** and GitHub Pages will republish automatically.
 
-## Add GameChanger live scoreboard
-GameChanger's official team widget can be copied from the team's web page under **Tools > Create Scoreboard Widget**. Paste that snippet into the `#gamechanger` section where the `widget-note` appears.
-
-## Free hosting
-This folder is ready for GitHub Pages, Cloudflare Pages, Netlify, or any static web host.
+## Files
+- `index.html` - page structure
+- `styles.css` - site design
+- `team-data.js` - easy team information edits
+- `app.js` - renders roster cards
+- `assets/` - logo, schedule, QR code
