@@ -152,9 +152,11 @@
           </article>` : ""}
       </div>`;
 
-    nextUp.innerHTML = seasonSummary +
-      card("NEXT PRACTICE", nextPractice, "practice") +
-      card("NEXT GAME", nextGame, "game");
+    nextUp.innerHTML = seasonSummary + `
+      <div class="next-cards-grid">
+        ${card("NEXT PRACTICE", nextPractice, "practice")}
+        ${card("NEXT GAME", nextGame, "game")}
+      </div>`;
   }
 
   /* SPOTLIGHT */
