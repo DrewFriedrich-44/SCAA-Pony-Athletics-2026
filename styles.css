@@ -36,95 +36,69 @@
   .schedule-desktop{display:none}
   .schedule-mobile{display:grid;gap:10px}
 }
-/* MATCH QR SECTION TO GAMECHANGER WIDTH */
-.qr-card,
-.qr-wrap,
-.qr-panel {
+/* GAMECHANGER RESPONSIVE LAYOUT */
+
+/* Desktop */
+.gc-grid {
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 50px;
+  align-items: center;
+}
+
+.gc-widget-wrap {
   width: 100%;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+  overflow: hidden;
 }
 
-.qr-card img,
-.qr-wrap img,
-.qr-panel img {
+#gc-schedule-widget-79qt {
   width: 100%;
-  height: auto;
-  display: block;
 }
 
-@media (max-width: 700px) {
-  .qr-card,
-  .qr-wrap,
-  .qr-panel {
-    max-width: 100%;
-  }
-}/* GAMECHANGER + QR WIDTH ALIGNMENT */
-.gamechanger-grid {
-  grid-template-columns: 1fr !important;
-}
-
-.gamechanger-panel,
 .qr-card {
   width: 100%;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 360px;
+  justify-self: center;
 }
 
 .qr-card img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
-/* Keep both full-width on smaller screens */
-@media (max-width: 700px) {
-  .gamechanger-panel,
-  .qr-card {
-    max-width: 100%;
-  }
-/* TABLET / IPAD GAMECHANGER FIX */
-@media (max-width: 1200px) {
-  .gamechanger-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  #gc-schedule-widget-79qt {
-    width: 100% !important;
-    max-width: 620px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: hidden !important;
+/* Tablet / iPad */
+@media (max-width: 1100px) {
+  .gc-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .qr-card {
-    width: 100% !important;
-    max-width: 620px !important;
-    margin: 24px auto 0 !important;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
   }
 
   .qr-card img {
-    width: 100% !important;
-    max-width: 420px !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    display: block !important;
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .gc-widget-wrap {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-/* Keep the QR itself from becoming enormous */
-.qr-card img {
-  width: min(100%, 420px);
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-#gc-schedule-widget-79qt {
-  width: 100%;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+/* Phone */
+@media (max-width: 800px) {
+  .gc-widget-wrap,
+  .qr-card {
+    max-width: 100%;
+  }
+
+  .qr-card img {
+    width: 100%;
+    max-width: 320px;
+  }
 }
