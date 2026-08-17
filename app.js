@@ -2,16 +2,22 @@
   const data = window.TEAM_DATA || {};
   const initials = (name) =>
     name.trim().split(/\s+/).map(part => part[0] || "").join("").slice(0, 2).toUpperCase();
+  const publicPlayerName = (name) => {
+    const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
+    if (parts.length < 2) return parts[0] || "Player";
+    return `${parts[0]} ${parts.at(-1)[0].toUpperCase()}.`;
+  };
 
   /* ROSTER */
   const rosterGrid = document.getElementById("roster-grid");
   if (rosterGrid && Array.isArray(data.roster)) {
     rosterGrid.innerHTML = data.roster.map(player => {
       const isTbd = String(player.number).toUpperCase() === "TBD";
+      const displayName = publicPlayerName(player.name);
 
       const media = player.photo
-        ? `<img class="player-photo" src="${player.photo}" alt="${player.name}"/>`
-        : `<div class="player-photo-placeholder" aria-label="Photo placeholder for ${player.name}">${initials(player.name)}</div>`;
+        ? `<img class="player-photo" src="${player.photo}" alt="${displayName}"/>`
+        : `<div class="player-photo-placeholder" aria-label="Photo placeholder for ${displayName}">${initials(player.name)}</div>`;
 
       const rawPositions = Array.isArray(player.positions) ? player.positions : [];
       const outfield = ["LF", "CF", "RF"];
@@ -30,7 +36,7 @@
           ${media}
           <div class="roster-number${isTbd ? " tbd" : ""}">${player.number}</div>
           <div>
-            <h3>${player.name}</h3>
+            <h3>${displayName}</h3>
             <div class="position-pills">${positionPills}</div>
             <div class="player-bats">Bats: ${player.bats || "R"}</div>
           </div>
