@@ -85,4 +85,34 @@
   .qr-card {
     max-width: 100%;
   }
+/* GAMECHANGER SECTION LAYOUT */
+.gamechanger-grid {
+  display: block !important;
+}
+
+.gamechanger-panel,
+.qr-card {
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-card {
+  margin-top: 24px;
+}
+
+/* Keep the QR itself from becoming enormous */
+.qr-card img {
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+#gc-schedule-widget-79qt {
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
