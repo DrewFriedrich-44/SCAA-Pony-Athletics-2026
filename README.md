@@ -22,3 +22,9 @@ Upload images into a `gallery/` folder and add them to the `gallery` array.
 - `app.js` = rendering logic
 - `index.html` = page structure
 - `styles.css` = design
+
+
+## Game results
+Every Game in `team-data.js` now includes `result` and `score`.
+Example: `result: "W", score: "8-5"`.
+Leave both blank before the game. Results render automatically on desktop and mobile schedules.

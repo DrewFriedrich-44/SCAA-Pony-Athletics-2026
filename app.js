@@ -2,10 +2,13 @@
   const data = window.TEAM_DATA || {};
   const initials = (name) =>
     name.trim().split(/\s+/).map(part => part[0] || "").join("").slice(0, 2).toUpperCase();
-  const publicPlayerName = (name) => {
-    const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
-    if (parts.length < 2) return parts[0] || "Player";
-    return `${parts[0]} ${parts.at(-1)[0].toUpperCase()}.`;
+
+
+  const publicPlayerName = (fullName) => {
+    const parts = String(fullName || "").trim().split(/\s+/).filter(Boolean);
+    if (!parts.length) return "";
+    if (parts.length === 1) return parts[0];
+    return `${parts[0]} ${parts[parts.length - 1].charAt(0)}.`;
   };
 
   /* ROSTER */
@@ -13,11 +16,10 @@
   if (rosterGrid && Array.isArray(data.roster)) {
     rosterGrid.innerHTML = data.roster.map(player => {
       const isTbd = String(player.number).toUpperCase() === "TBD";
-      const displayName = publicPlayerName(player.name);
 
       const media = player.photo
-        ? `<img class="player-photo" src="${player.photo}" alt="${displayName}"/>`
-        : `<div class="player-photo-placeholder" aria-label="Photo placeholder for ${displayName}">${initials(player.name)}</div>`;
+        ? `<img class="player-photo" src="${player.photo}" alt="${publicPlayerName(player.name)}"/>`
+        : `<div class="player-photo-placeholder" aria-label="Photo placeholder for ${publicPlayerName(player.name)}">${initials(player.name)}</div>`;
 
       const rawPositions = Array.isArray(player.positions) ? player.positions : [];
       const outfield = ["LF", "CF", "RF"];
@@ -36,7 +38,7 @@
           ${media}
           <div class="roster-number${isTbd ? " tbd" : ""}">${player.number}</div>
           <div>
-            <h3>${displayName}</h3>
+            <h3>${publicPlayerName(player.name)}</h3>
             <div class="position-pills">${positionPills}</div>
             <div class="player-bats">Bats: ${player.bats || "R"}</div>
           </div>
@@ -106,14 +108,6 @@
 
     const nextPractice = upcoming.find(e => e.type.toLowerCase() === "practice");
     const nextGame = upcoming.find(e => e.type.toLowerCase() === "game");
-    const completedGames = schedule.filter(e =>
-      e.type.toLowerCase() === "game" && ["W", "L", "T"].includes(String(e.result).toUpperCase())
-    );
-    const wins = completedGames.filter(e => String(e.result).toUpperCase() === "W").length;
-    const losses = completedGames.filter(e => String(e.result).toUpperCase() === "L").length;
-    const ties = completedGames.filter(e => String(e.result).toUpperCase() === "T").length;
-    const record = ties ? `${wins}-${losses}-${ties}` : `${wins}-${losses}`;
-    const lastGame = completedGames.at(-1);
 
     const card = (label, e, typeClass) => {
       if (!e) return `
@@ -134,29 +128,9 @@
         </article>`;
     };
 
-    const seasonSummary = `
-      <div class="season-summary${lastGame ? " has-last-game" : ""}">
-        <article class="record-card">
-          <span>SEASON RECORD</span>
-          <strong>${record}</strong>
-        </article>
-        ${lastGame ? `
-          <article class="last-game-card">
-            <span>LAST GAME</span>
-            <div class="last-game-score">
-              <b class="game-result ${lastGame.result.toLowerCase()}">${lastGame.result}</b>
-              <strong>${lastGame.score || "Final"}</strong>
-              <span>vs ${lastGame.opponent || "TBD"}</span>
-            </div>
-            <small>${lastGame.date}</small>
-          </article>` : ""}
-      </div>`;
-
-    nextUp.innerHTML = seasonSummary + `
-      <div class="next-cards-grid">
-        ${card("NEXT PRACTICE", nextPractice, "practice")}
-        ${card("NEXT GAME", nextGame, "game")}
-      </div>`;
+    nextUp.innerHTML =
+      card("NEXT PRACTICE", nextPractice, "practice") +
+      card("NEXT GAME", nextGame, "game");
   }
 
   /* SPOTLIGHT */
