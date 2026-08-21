@@ -32,6 +32,7 @@ window.TEAM_DATA = {
     { id: "1kyq5s", number: "12", name: "Ryan Bowen", positions: ["P","2B","3B","SS","LF","CF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
     { id: "hh1g2x", number: "25", name: "Jaxon Harris", positions: ["P","1B","2B","3B","LF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
     { id: "rc3fck", number: "10",  name: "Kellen Moran", positions: ["2B","LF","CF","RF"], canPitch: false, skill: 2, bats: "R", photo: "" }
+    { id: "masonshimp14", number: "14", name: "Mason Shimp", positions: [], canPitch: false, skill: 2, bats: "R", photo: "" },
   ],
 
   /* Next Up is calculated automatically from this schedule.
