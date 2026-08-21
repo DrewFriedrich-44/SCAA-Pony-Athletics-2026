@@ -26,12 +26,12 @@ window.TEAM_DATA = {
     { id: "04rpv3", number: "18", name: "Lucas Strem", positions: ["P","C","2B","3B","SS"], canPitch: true, skill: 1, bats: "R", photo: "" },
     { id: "clyssm", number: "32", name: "Luke Dudash", positions: ["P","2B","LF","CF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
     { id: "khphfw", number: "21", name: "Reese Settar", positions: ["P","2B","SS","LF","CF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
-    { id: "m6jlsc", number: "13",  name: "Jay Stanko", positions: ["C","1B","3B","LF","RF"], canPitch: false, skill: 1, bats: "R", photo: "" },
+    { id: "m6jlsc", number: "13", name: "Jay Stanko", positions: ["C","1B","3B","LF","RF"], canPitch: false, skill: 1, bats: "R", photo: "" },
     { id: "hbkqiw", number: "15", name: "Pete Barnes", positions: ["C","1B","LF","CF","RF"], canPitch: false, skill: 2, bats: "R", photo: "" },
     { id: "5cnwt8", number: "17", name: "Stefan Nazzaro", positions: ["1B","2B","3B","SS","LF","CF","RF"], canPitch: false, skill: 3, bats: "R", photo: "" },
     { id: "1kyq5s", number: "12", name: "Ryan Bowen", positions: ["P","2B","3B","SS","LF","CF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
     { id: "hh1g2x", number: "25", name: "Jaxon Harris", positions: ["P","1B","2B","3B","LF","RF"], canPitch: true, skill: 2, bats: "R", photo: "" },
-    { id: "rc3fck", number: "10",  name: "Kellen Moran", positions: ["2B","LF","CF","RF"], canPitch: false, skill: 2, bats: "R", photo: "" },
+    { id: "rc3fck", number: "10", name: "Kellen Moran", positions: ["2B","LF","CF","RF"], canPitch: false, skill: 2, bats: "R", photo: "" },
     { id: "masonshimp14", number: "14", name: "Mason Shimp", positions: [], canPitch: false, skill: 2, bats: "R", photo: "" }
   ],
 
